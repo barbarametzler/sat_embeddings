@@ -12,7 +12,6 @@ from torchvision.ops import FeaturePyramidNetwork
 
 #num_workers =0
 
-
 def load_model(model_weights_path):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = torchvision.models.swin_transformer.swin_v2_b().to(device)
@@ -98,7 +97,7 @@ def feature_vector_with_index(folder_path, model, fpn):
 def main(input_folder, output_file, model_weights_path):
     model, fpn = load_model(model_weights_path)
     emb_masked = feature_vector_with_index(input_folder, model, fpn)
-    emb_masked.to_csv(output_file)
+    emb_masked.to_parquet(output_file, engine='fastparquet')
     print('Saved')
 
 if __name__ == '__main__':
