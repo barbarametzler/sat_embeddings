@@ -1,5 +1,5 @@
 # sat_emb
-This is a repository to create image embeddings from a large satellite composite (XX enter link). The embeddings can be
+This is a repository to create image embeddings from a large [satellite composite](https://data.jrc.ec.europa.eu/dataset/0bd1dfab-e311-4046-8911-c54a8750df79). The embeddings can be
 used for a variety of tasks such as improving existing models for classification, as well as unsupervised tasks.
 
 ## Installation
@@ -9,8 +9,13 @@ Please install the conda environment called environment.yml. This will install a
 The embeddings code can be run with Pytorch + CUDA or regular CPU depending on access to computing.
 
 ## Data download
+<<<<<<< HEAD
 Please download the data from the following link: [link](www.includelinhere.com)
 It includes everything you need except for the vrt satellite composite file.
+=======
+Most of the data is not included in this repository. 
+Please download the data from the following link: [GoogleDrive](https://drive.google.com/drive/folders/1HJzoLHx9Bc5ZaOCl-GyzwGPBZzltPpii?usp=drive_link)
+>>>>>>> 29721d225a5d097d8483ad9b734bb48c8772b3ab
 
 ## Usage
 ### 1. Data preprocessing: create tiles
