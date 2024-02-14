@@ -6,7 +6,7 @@ used for a variety of tasks such as improving existing models for classification
 Please install the conda environment called environment.yml. This will install all the necessary packages to run the code.
 
 ## Dependencies
-The embeddings code can be run with Pytorch + CUDA or regular CPU depending on access to computing.
+The embeddings code can be run with Pytorch + CUDA or regular CPU depending on access to computing power.
 
 ## Data download 
 Please download the data from the following link: [GoogleDrive](https://drive.google.com/drive/folders/1HJzoLHx9Bc5ZaOCl-GyzwGPBZzltPpii?usp=drive_link)
@@ -18,6 +18,7 @@ The size refers to the dataset size - e.g. number of tiles (and helps you create
 ```
 python create_tiles.py --size 9000000 --mask False --h3_shapes_path /data/vector/420_grid.parquet --grid420_path /data/vector/grid_complete.parquet --vrt_file /data/raster/all_GHS-composite-S2.vrt --folder /data/raster/england/unmasked/
 ```
+Note: The whole England dataset includes 1,382,771 tiles. The whole dataset with clipped tiles is very large ~ about 700GB.
 
 ### 2. Create embeddings
 Create embeddings by running the following command. The input folder should contain the tiles created in the previous step. The output file will contain the embeddings in a parquet file. The model weights path should point to the model weights file.
