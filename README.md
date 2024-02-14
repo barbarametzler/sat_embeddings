@@ -5,6 +5,9 @@ used for a variety of tasks such as improving existing models for classification
 ## Installation
 Please install the conda environment called environment.yml. This will install all the necessary packages to run the code.
 
+## Dependencies
+The embeddings code can be run with Pytorch + CUDA or regular CPU depending on access to computing.
+
 ## Data download
 Most of the data is not included in this repository. 
 Please download the data from the following link: [link](www.includelinhere.com)
@@ -12,7 +15,7 @@ Please download the data from the following link: [link](www.includelinhere.com)
 ## Usage
 ### 1. Data preprocessing: create tiles
 Create .tif files from the input .vrt file. The input .vrt file should contain the satellite composite. The files are saved in the output_folder. The h3_shapes_path should point to the h3 grid file. The grid420_path should point to the grid file. 
-The size refers to the dataset size (and helps you create a smaller subset more easily). The mask parameter should be set to True if the tiles should be masked with the h3 grid. 
+The size refers to the dataset size - e.g. number of tiles (and helps you create a smaller subset more easily). The mask parameter should be set to True if the tiles should be masked with the h3 grid. 
 ```
 python create_tiles.py --size 9000000 --mask False --h3_shapes_path /data/vector/420_grid.parquet --grid420_path /data/vector/grid_complete.parquet --vrt_file /data/raster/all_GHS-composite-S2.vrt --folder /data/raster/england/unmasked/
 ```
