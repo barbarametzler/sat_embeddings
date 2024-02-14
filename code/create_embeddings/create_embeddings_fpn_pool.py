@@ -12,22 +12,6 @@ from torchvision.ops import FeaturePyramidNetwork
 
 #num_workers =0
 
-'''
-## load model
-model = torchvision.models.swin_transformer.swin_v2_b()
-full_state_dict = torch.load('/Users/bmetzler/Library/CloudStorage/OneDrive-TheAlanTuringInstitute/GitHub/sat_demo/weights/satlas/satlas-model-v1-lowres.pth', map_location=torch.device('cpu'))
-# Extract just the Swin backbone parameters from the full state dict.
-swin_prefix = 'backbone.backbone.'
-fpn_prefix = 'intermediates.0.fpn.'           # FPN
-
-swin_state_dict = {k[len(swin_prefix):]: v for k, v in full_state_dict.items() if k.startswith(swin_prefix)}
-model.load_state_dict(swin_state_dict)
-
-fpn_state_dict = {k[len(fpn_prefix):]: v for k, v in full_state_dict.items() if k.startswith(fpn_prefix)}
-fpn = FeaturePyramidNetwork([128, 256, 512, 1024], out_channels=128)
-fpn.load_state_dict(fpn_state_dict)
-'''
-
 
 def load_model(model_weights_path):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -128,6 +112,6 @@ if __name__ == '__main__':
 
 
 #def main():
-#emb_masked = feature_vector_with_index('/Users/bmetzler/Documents/sat_demo/data/subset/summed_masked/*/*.tif')
-#emb_masked.to_csv('/Users/bmetzler/Documents/sat_demo/data/NC_emb_sub_satlas_masked_pooled.csv')
+#emb_masked = feature_vector_with_index('../sat_demo/data/subset/summed_masked/*/*.tif')
+#emb_masked.to_csv('../sat_demo/data/NC_emb_sub_satlas_masked_pooled.csv')
 #print('saved')
