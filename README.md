@@ -9,7 +9,7 @@ Please install the conda environment called environment.yml. This will install a
 The embeddings code can be run with Pytorch + CUDA or regular CPU depending on access to computing power.
 
 ## Data download 
-Please download the data from the following link: [GoogleDrive](https://drive.google.com/drive/folders/1HJzoLHx9Bc5ZaOCl-GyzwGPBZzltPpii?usp=drive_link)
+Please download the data from the following link: [GoogleDrive](https://drive.google.com/drive/folders/1HJzoLHx9Bc5ZaOCl-GyzwGPBZzltPpii?usp=drive_link) (email me for access).
 
 ## Usage
 ### 1. Data preprocessing: create tiles
