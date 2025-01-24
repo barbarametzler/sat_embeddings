@@ -1,5 +1,5 @@
 # sat_emb
-This is a repository to create image embeddings from a large [satellite composite](https://data.jrc.ec.europa.eu/dataset/0bd1dfab-e311-4046-8911-c54a8750df79). The embeddings can be
+This is a repository to create image embeddings from a large [satellite composite](https://data.jrc.ec.europa.eu/dataset/0bd1dfab-e311-4046-8911-c54a8750df79) with a large pretrained transformer-based model. The embeddings can be
 used for a variety of tasks such as improving existing models for classification, as well as unsupervised tasks.
 
 ## Installation
