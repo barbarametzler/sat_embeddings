@@ -1,6 +1,6 @@
 # sat_emb
 This is a repository to create image embeddings from a large [satellite composite](https://data.jrc.ec.europa.eu/dataset/0bd1dfab-e311-4046-8911-c54a8750df79) with a large pretrained transformer-based model ([Satlas](https://github.com/allenai/satlas/blob/main/SatlasPretrain.md)). The embeddings can be
-used for a variety of tasks such as improving existing models for classification, as well as unsupervised tasks.
+used for a variety of tasks such as improving existing models for regression or classification (tested on air quality, house price and spatial signature predictions), as well as unsupervised tasks.
 
 ## Installation
 Please install the conda environment called environment.yml. This will install all the necessary packages to run the code.
